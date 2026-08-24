@@ -6,5 +6,5 @@ Disallow: /*?page=
 Disallow: /*?src=
 Disallow: /*?id=
 
-Sitemap: /sitemap.xml
-Sitemap: /posts/sitemap-posts.xml
+Sitemap: https://www.wordsearchnook.com/sitemap.xml
+Sitemap: https://www.wordsearchnook.com/posts/sitemap-posts.xml
