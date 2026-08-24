@@ -1,0 +1,14 @@
+globalThis.facebookURL = "#";
+globalThis.PinterestURL = "#";
+globalThis.twitterURL = "#";
+globalThis.redditURL = "#";
+globalThis.siteUrl = "https:\/\/www.wordsearchnook.com";
+globalThis.homepageTitle = "Word Search Nook";
+globalThis.homepageTagline = "Word Search Nook - Free Large-Print Word Search Puzzles for Every Season";
+globalThis.email = 'contact@myrecipes.com';
+globalThis.copyright = "2025 - 2026 Word Search Nook. All rights reserved.";
+globalThis.homeBestPostsActive = true;
+globalThis.homeBestPostsCount = 4;
+globalThis.homeLatestByCategoryActive = true;
+globalThis.homeLatestByCategoryPerCat = 4;
+globalThis.homeLatestByCategoryMaxCats = 4;
