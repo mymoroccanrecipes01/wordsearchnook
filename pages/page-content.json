@@ -1,0 +1,136 @@
+{
+    "niche": "Large-Print Word Search Puzzles for Every Season",
+    "home": {
+        "hero_tagline": "Word Search Nook - Free Large-Print Word Search Puzzles for Every Season",
+        "welcome_text": "Welcome to {{SITE_NAME}}, your go-to source for free large-print word search puzzles for every season, theme, and skill level. Discover a growing collection of fun and engaging printable word search puzzles designed to be easy to read, relaxing, and enjoyable for everyone.\n\nWhether you want to unwind, challenge your mind, improve your focus, or celebrate a favorite season with a themed puzzle, {{SITE_NAME}} has something for you. Explore free large-print word searches for adults, seniors, families, and puzzle lovers and enjoy a fun brain activity anytime."
+    },
+    "about": {
+        "hero_subtitle": "Providing free, high-quality large-print word search puzzles for every season, theme, and skill level. Enjoy accessible, printable puzzles designed to relax, entertain, and challenge your mind.",
+        "explore_title": "What Can You Explore Here?",
+        "explore_intro": "{{SITE_NAME}} offers a wide variety of word search puzzles tailored for every season throughout the year. Our puzzles are designed with large-print format to ensure easy readability and enjoyment for everyone.",
+        "explore_items": [
+            {
+                "bold": "Feature:",
+                "text": "Seasonal Themes - Puzzles for spring, summer, fall, and winter to match any mood."
+            },
+            {
+                "bold": "Feature:",
+                "text": "Large-Print Format - Designed to be accessible for readers needing bigger text and clearer visuals."
+            },
+            {
+                "bold": "Feature:",
+                "text": "Free to Use - All puzzles are completely free with no hidden costs or subscriptions."
+            },
+            {
+                "bold": "Feature:",
+                "text": "Printable Puzzles - Easily print your favorite puzzles to enjoy anytime offline."
+            },
+            {
+                "bold": "Feature:",
+                "text": "Regular Updates - Fresh puzzles added throughout the year to keep you challenged and entertained."
+            }
+        ],
+        "founder_section_title": "Who Am I?",
+        "founder_intro": "I’m passionate about creating fun, accessible, and easy-to-read word search puzzles that everyone can enjoy. With a love for puzzles and a strong focus on accessibility, I created {{SITE_NAME}} to provide free large-print word search puzzles designed for adults, seniors, families, and puzzle enthusiasts of all skill levels.\n\nFrom seasonal word searches to a variety of fun and challenging themes, each puzzle is thoughtfully created to encourage relaxation, focus, mental stimulation, and year-round enjoyment. My goal is to make printable word search puzzles accessible and enjoyable for everyone.",
+        "founder_items": [
+            {
+                "bold": "Quality:",
+                "text": "Each puzzle is carefully crafted for clarity and engagement."
+            },
+            {
+                "bold": "Quality:",
+                "text": "Focused on readability with large fonts and clear layouts."
+            },
+            {
+                "bold": "Quality:",
+                "text": "Seasonal themes that connect with real-world celebrations and moods."
+            },
+            {
+                "bold": "Quality:",
+                "text": "User-friendly design prioritizing a smooth and enjoyable experience."
+            }
+        ],
+        "goals_title": "What Are My Goals?",
+        "goals_intro": "At {{SITE_NAME}}, we strive to provide the best large-print word search puzzles with these goals in mind:",
+        "goals_items": [
+            {
+                "bold": "Goal:",
+                "text": "Enhance accessibility for all puzzle lovers."
+            },
+            {
+                "bold": "Goal:",
+                "text": "Offer a wide variety of puzzles for every season of the year."
+            },
+            {
+                "bold": "Goal:",
+                "text": "Keep puzzles free and easily accessible to everyone."
+            },
+            {
+                "bold": "Goal:",
+                "text": "Encourage mental wellness through enjoyable activities."
+            },
+            {
+                "bold": "Goal:",
+                "text": "Continuously update the site with fresh, engaging puzzles."
+            }
+        ],
+        "selection_title": "How Do I Choose Content?",
+        "selection_intro": "Content quality and user accessibility are at the heart of every puzzle selection made for {{SITE_NAME}}. Here’s what guides the process:",
+        "selection_items": [
+            {
+                "bold": "Standard:",
+                "text": "Legibility - Large, clear fonts optimized for easy reading."
+            },
+            {
+                "bold": "Standard:",
+                "text": "Relevant Seasonal Themes - Timely puzzles to keep content fresh and meaningful."
+            },
+            {
+                "bold": "Standard:",
+                "text": "Variety - A wide range of words and difficulty levels to appeal to all solvers."
+            },
+            {
+                "bold": "Standard:",
+                "text": "Free Access - Committed to no-cost puzzles without barriers."
+            },
+            {
+                "bold": "Standard:",
+                "text": "User Experience - Intuitive design for hassle-free use across devices."
+            }
+        ],
+        "founder_name": "Alexandra Bennett",
+        "founder_role": "Founder & Puzzle Curator",
+        "connect_title": "Let's Connect!",
+        "connect_text": "We’d love to hear from you! Whether you have suggestions or just want to say hello, feel free to reach out anytime."
+    },
+    "contact": {
+        "hero_subtitle": "Reach Out About Your Large-Print Word Search Puzzle Experience",
+        "intro": "Have questions, comments, or suggestions about our large-print word search puzzles? We’d love to hear from you! Contact us anytime at <strong>contact@{{SITE_HOST}}</strong>.\n\nWhether you have feedback about a puzzle, a suggestion for a new theme, or a question about our free printable word search puzzles, we’re here to help. Your feedback helps us create more accessible, enjoyable, and engaging puzzles for everyone.",
+        "faq": [
+            {
+                "q": "Are all word search puzzles free to access?",
+                "a": "Yes, all puzzles on {{SITE_NAME}} are completely free with no subscriptions or fees."
+            },
+            {
+                "q": "Can I request puzzles for a specific season or theme?",
+                "a": "Absolutely! We're happy to consider requests to better serve our community."
+            },
+            {
+                "q": "Do you offer custom puzzle sizes or formats?",
+                "a": "Currently, we focus on large-print format, but please contact us if you have special needs."
+            },
+            {
+                "q": "How often are new puzzles added?",
+                "a": "New seasonal puzzles are added regularly, keeping content fresh throughout the year."
+            }
+        ]
+    },
+    "privacy": {
+        "last_updated": "August 24, 2026",
+        "hero_subtitle": "We respect your privacy and do not collect personal data.",
+        "welcome_text": "{{SITE_NAME}} is committed to protecting your privacy while providing free large-print word search puzzles for every season, theme, and skill level. We believe you should be able to enjoy our printable puzzles in a safe, simple, and comfortable online environment.\n\nWe do not track or collect personal or sensitive information from visitors. Our goal is to make discovering and enjoying accessible large-print word search puzzles easy, private, and worry-free.",
+        "welcome_text2": "Our site may use third-party services solely to deliver free puzzles efficiently, and these are carefully chosen to respect your privacy on {{SITE_HOST}}.",
+        "conclusion_text": "Thank you for trusting {{SITE_NAME}} as your source for accessible word search puzzles. We remain dedicated to offering a safe, private, and enjoyable puzzle experience for everyone."
+    },
+    "generated_at": "2026-08-24"
+}

@@ -22,7 +22,6 @@ fb_posted_log.json
 yt_posted_log.json
 fb_pending_comments.json
 keywords-queue.json
-pages/
 rss/
 *.zip
 
