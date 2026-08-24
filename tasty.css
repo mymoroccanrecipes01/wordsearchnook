@@ -88,6 +88,10 @@ img { display: block; max-width: 100%; }
     align-items: center;
 }
 
+nav.nav img {
+    width: 17px;
+}
+
 .nav a {
     display: flex;
     align-items: center;
