@@ -1,9 +1,9 @@
 [
-  {
-    "id": "author_001",
-    "name": "Sarah Mitchell",
-    "description": "Sarah Mitchell",
-    "imagePath": "authors/images/author.jpg",
-    "active": true
-  }
+    {
+        "id": "author_001",
+        "name": "Alexandra Bennett",
+        "description": "I’m passionate about creating fun, accessible, and easy-to-read word search puzzles that everyone can enjoy. With a love for puzzles and a strong focus on accessibility, I created {{SITE_NAME}} to provide free large-print word search puzzles designed for adults, seniors, families, and puzzle enthusiasts of all skill levels.  From seasonal word searches to a variety of fun and challenging themes, each puzzle is thoughtfully created to encourage relaxation, focus, mental stimulation, and year-round enjoyment. My goal is to make printable word search puzzles accessible and enjoyable for everyone.",
+        "imagePath": "authors/images/author.jpg",
+        "active": true
+    }
 ]
