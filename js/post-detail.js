@@ -110,6 +110,60 @@ class PostDetailLoader {
         `;
     }
 
+    // Bouton pour télécharger une image individuelle
+    createDownloadButton(imageUrl, title = 'puzzle') {
+        const safeUrl = imageUrl.replace(/'/g, "\\'");
+        const safeName = (title || 'puzzle').replace(/'/g, "\\'");
+        return `
+            <button class="download-image-btn"
+                    onclick="window.postDetailLoader && window.postDetailLoader.downloadImage('${safeUrl}', '${safeName}')"
+                    title="Download this image"
+                    aria-label="Download this image">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download
+            </button>
+        `;
+    }
+
+    // Télécharge une seule image en forçant le nom de fichier
+    async downloadImage(imageUrl, fileName = 'puzzle') {
+        try {
+            const response = await fetch(imageUrl);
+            const blob = await response.blob();
+            const ext = (imageUrl.split('.').pop() || 'jpg').split('?')[0];
+            const slug = fileName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'puzzle';
+            const blobUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = `${slug}.${ext}`;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+            window.open(imageUrl, '_blank');
+        }
+    }
+
+    // Télécharge le PDF complet du post (toutes les pages du puzzle en un seul fichier,
+    // pré-généré côté serveur via pdf_generate_single() au moment de la publication —
+    // voir auto-daily-csv.php, étape isOnline=true)
+    downloadPostPdf(post) {
+        const slug = post && (post.slug || post.folderName);
+        if (!slug) return;
+        const pdfUrl = `./posts/${slug}/pdf/${slug}-modern-minimal-a4.pdf`;
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.download = `${slug}.pdf`;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+    }
+
     // Méthode pour générer l'URL Pinterest
     generatePinterestUrl(imageUrl, title, description = '', post = null) {
         const currentUrl = window.location.href;
@@ -209,6 +263,63 @@ class PostDetailLoader {
                 height: 14px;
             }
 
+            .download-image-btn {
+                position: absolute;
+                top: 12px;
+                right: 96px;
+                background: #2d2d2d;
+                color: white;
+                border: none;
+                border-radius: 50px;
+                padding: 10px 16px;
+                font-size: 13px;
+                font-weight: 700;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+                transition: all 0.2s ease;
+                transform: translateY(-5px);
+                opacity: 0;
+                z-index: 10;
+            }
+
+            @media (hover: none) {
+                .download-image-btn {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .download-image-btn:hover {
+                background: #000;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                transform: translateY(-2px);
+            }
+
+            .download-image-btn svg {
+                width: 14px;
+                height: 14px;
+            }
+
+            .image-container:hover .download-image-btn {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .mini-post .download-image-btn {
+                top: 8px;
+                right: 70px;
+                padding: 6px 8px;
+                font-size: 10px;
+            }
+
+            .mini-post .download-image-btn svg {
+                width: 12px;
+                height: 12px;
+            }
+
             .image-container:hover .pinterest-pin-btn {
                 opacity: 1;
                 transform: translateY(0);
@@ -279,6 +390,7 @@ class PostDetailLoader {
         return `
             <div class="image-container">
                 ${imgContent}
+                ${this.createDownloadButton(imageUrl, title)}
                 ${this.createPinterestButton(imageUrl, title, description, post)}
             </div>
         `;
@@ -2058,6 +2170,7 @@ addFAQSchema(post) {
            // console.error('Container not available to display post');
             return;
         }
+        this.currentPost = post;
         this.addPostMetaTags(post);
         // Ajouter les styles Pinterest et RSS
         this.addPinterestStyles();
@@ -2105,7 +2218,10 @@ addFAQSchema(post) {
                 <button id="jump-to-post" class="social-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M192 512L192 334.4C197.2 335.4 202.5 336 208 336L224 336L224 512C224 520.8 216.8 528 208 528C199.2 528 192 520.8 192 512zM208 288C190.3 288 176 273.7 176 256L176 232C176 165.7 229.7 112 296 112L344 112C396.5 112 441.1 145.7 457.4 192.7C454.3 192.2 451.2 192 448 192C428 192 410.1 201.2 398.3 215.6C389.3 210.7 378.9 208 368 208C352.9 208 339 213.3 328 222C317 213.2 303.1 208 288 208L248 208C234.7 208 224 218.7 224 232C224 245.3 234.7 256 248 256L288 256C296.8 256 304 263.2 304 272C304 280.8 296.8 288 288 288L208 288zM128 256L128 256C128 274 134 290.6 144 304L144 512C144 547.3 172.7 576 208 576C243.3 576 272 547.3 272 512L272 430C277.1 431.3 282.5 432 288 432C313.3 432 335.2 417.3 345.6 396C352.6 398.6 360.1 400 368 400C388 400 405.9 390.8 417.7 376.4C426.7 381.3 437.1 384 448 384C483.3 384 512 355.3 512 320L512 232C512 139.2 436.8 64 344 64L296 64C203.2 64 128 139.2 128 232L128 256zM464 320C464 328.8 456.8 336 448 336C439.2 336 432 328.8 432 320L432 256C432 247.2 439.2 240 448 240C456.8 240 464 247.2 464 256L464 320zM288 336C293.5 336 298.9 335.3 304 334L304 368C304 376.8 296.8 384 288 384C279.2 384 272 376.8 272 368L272 336L288 336zM352 312L352 272C352 263.2 359.2 256 368 256C376.8 256 384 263.2 384 272L384 336C384 344.8 376.8 352 368 352C359.2 352 352 344.8 352 336L352 312z"/></svg>
                 Jump to Post</button>
-            
+                <button id="download-all-post" class="social-icon" onclick="window.postDetailLoader && window.postDetailLoader.downloadPostPdf(window.postDetailLoader.currentPost)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                <span class="download-all-label">Download PDF</span></button>
+
             </div>
             <div class="wrap">        
             

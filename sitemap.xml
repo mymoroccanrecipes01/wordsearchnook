@@ -4,12 +4,30 @@
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://www.wordsearchnook.com/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.wordsearchnook.com/posts/easy-large-print-word-search-puzzle-perfect-for-seniors-and-relaxing-afternoons/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.wordsearchnook.com/posts/easy-large-print-word-search-puzzle-perfect-for-seniors-and-relaxing-afternoons/images/easy-large-print-word-search-puzzle-perfect-for-seniors-and-relaxing-afternoons_image_1.webp</image:loc>
+      <image:title>Easy Large-Print Word Search Puzzle Perfect for Seniors and Relaxing Afternoons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wordsearchnook.com/posts/easy-large-print-word-search-puzzle-perfect-for-seniors-and-relaxing-afternoons/images/easy-large-print-word-search-puzzle-perfect-for-seniors-and-relaxing-afternoons_image_2.webp</image:loc>
+      <image:title>Easy Large-Print Word Search Puzzle Perfect for Seniors and Relaxing Afternoons</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.wordsearchnook.com/posts/easy-large-print-word-search-puzzle-perfect-for-seniors-and-relaxing-afternoons/images/easy-large-print-word-search-puzzle-perfect-for-seniors-and-relaxing-afternoons_image_3.webp</image:loc>
+      <image:title>Easy Large-Print Word Search Puzzle Perfect for Seniors and Relaxing Afternoons</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.wordsearchnook.com/posts/easy-large-print-word-search-puzzle-perfect-for-seniors-and-relaxing-afternoons2/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

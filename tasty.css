@@ -112,6 +112,15 @@ button.search-btn {
   letter-spacing: -0.3px;
 }
 
+
+.nutrition-label {
+    display: none;
+}
+
+section#nutrition p {
+    display: none;
+}
+
 .nav { display: flex; gap: 2px; align-items: center; }
 
 nav.nav img { width: 17px; }
