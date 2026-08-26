@@ -97,6 +97,15 @@ img { display: block; max-width: 100%; }
 }
 
 
+div#post-content {
+    width: 80%;
+    margin: 0% 10%;
+}
+
+.post-image-container img {
+    width: 70%;
+}
+
 button.search-btn {
     display: none;
 }
