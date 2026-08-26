@@ -113,6 +113,15 @@ button.search-btn {
 }
 
 
+button {
+    background: #066acb;
+    padding: 1% 2%;
+    font-size: 20px;
+    border: 4px solid #fdc204;
+    margin: 1% 0%;
+    cursor: pointer;
+}
+
 .nutrition-label {
     display: none;
 }

@@ -112,8 +112,12 @@ class PostDetailLoader {
 
     // Bouton pour télécharger une image individuelle
     createDownloadButton(imageUrl, title = 'puzzle') {
-        const safeUrl = imageUrl.replace(/'/g, "\\'");
-        const safeName = (title || 'puzzle').replace(/'/g, "\\'");
+        const jsEscape = (str) => String(str)
+            .replace(/\\/g, '\\\\')
+            .replace(/'/g, "\\'")
+            .replace(/"/g, '&quot;');
+        const safeUrl = jsEscape(imageUrl);
+        const safeName = jsEscape(title || 'puzzle');
         return `
             <button class="download-image-btn"
                     onclick="window.postDetailLoader && window.postDetailLoader.downloadImage('${safeUrl}', '${safeName}')"
